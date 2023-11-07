@@ -1,6 +1,8 @@
+import 'package:flutter/material.dart';
 import 'package:minimal_shop/models/product.dart';
+import 'package:provider/provider.dart';
 
-class Shop {
+class Shop extends ChangeNotifier {
   // list of products for sale
   final List<Product> _shop = [
     // product 1
@@ -42,11 +44,13 @@ class Shop {
   // add product to list
   void addToCart(Product item) {
     _cart.add(item);
+    notifyListeners();
   }
 
   // remove product from list
   void removeFromCart(Product item){
     _cart.remove(item);
+    notifyListeners();
   }
 
 }
