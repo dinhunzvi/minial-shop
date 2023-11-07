@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:minimal_shop/components/my_button.dart';
 
 class IntroPage extends StatelessWidget {
   const IntroPage({super.key});
@@ -18,7 +19,6 @@ class IntroPage extends StatelessWidget {
 
             const SizedBox(height: 25,),
 
-
             // title
             const Text('Minimal Shop',
             style: TextStyle(
@@ -33,7 +33,11 @@ class IntroPage extends StatelessWidget {
               color: Theme.of(context).colorScheme.inversePrimary
             ),),
 
+            const SizedBox(height: 25,),
             // button
+            MyButton(
+                onTap: () {}, 
+                child: const Icon(Icons.arrow_forward))
           ],
         ),
       )
