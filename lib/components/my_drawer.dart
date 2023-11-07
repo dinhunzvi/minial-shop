@@ -45,7 +45,7 @@ class MyDrawer extends StatelessWidget {
           MyListTile(
               text: "Exit",
               iconData: Icons.logout,
-              onTap: () {}),)
+              onTap: () => Navigator.pushNamedAndRemoveUntil(context, '/intro_page', (route) =>false)),)
         ],
       ),
     );
