@@ -18,6 +18,11 @@ class ShopPage extends StatelessWidget {
         title: const Text('Shop Page'),
         elevation: 0,
         foregroundColor: Theme.of(context).colorScheme.inversePrimary,
+        actions: [
+          IconButton(
+              onPressed: () => Navigator.pushNamed(context, '/cart_page'),
+              icon: const Icon(Icons.shopping_cart))
+        ],
       ),
       drawer: const MyDrawer(),
       backgroundColor: Theme.of(context).colorScheme.background,
@@ -30,11 +35,8 @@ class ShopPage extends StatelessWidget {
                 "Pick from a range of premium products",
             style: TextStyle(color: Theme.of(context).colorScheme.inversePrimary),),
 
-          )
+          ),
 
-
-          // shop title
-          Text("MINIMAL SHOP"),
           // product list
           SizedBox(
             height: 550,

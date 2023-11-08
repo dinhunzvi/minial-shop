@@ -21,9 +21,8 @@ class MyProductTile extends StatelessWidget {
             child: const Text("Cancel"),),
             MaterialButton(
                 onPressed: () {
+                  context.read<Shop>().addToCart(product);
                   Navigator.pop(context);
-
-                  context.read()<Shop>().addToCart(product);
                 },
             child: const Text("Yes"),)
           ],
@@ -56,7 +55,7 @@ class MyProductTile extends StatelessWidget {
                   ),
                   width: double.infinity,
                   padding: const EdgeInsets.all(25),
-                  child: const Icon(Icons.favorite),
+                  child: Image.asset(product.imagePath),
                 ),),
 
               const SizedBox(height: 25,),
